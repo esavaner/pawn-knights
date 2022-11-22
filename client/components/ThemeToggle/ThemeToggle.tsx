@@ -1,10 +1,10 @@
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
+
 import { classNames } from '../../utils/classNames';
 import styles from './ThemeToggle.module.scss';
 
 export const ThemeToggle = () => {
-  console.log(styles);
   const [mounted, setMounted] = useState(false);
   const { setTheme } = useTheme();
 

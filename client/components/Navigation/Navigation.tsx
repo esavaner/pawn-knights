@@ -1,15 +1,19 @@
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { routes } from '../../utils/routes';
+import { FaHome } from 'react-icons/fa';
+
+import { routes } from 'utils/routes';
+
+import { Text } from '../Text/Text';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
-import style from './Navigation.module.scss';
+import './Navigation.scss';
 
 export const Navigation = () => {
   const { t } = useTranslation('components');
   const links = [
     {
       path: routes.home,
-      icon: '',
+      icon: <FaHome />,
       text: t('nav.home'),
     },
     {
@@ -20,24 +24,26 @@ export const Navigation = () => {
     {
       path: routes.ai,
       icon: '',
-      text: t('nav.vsBot'),
+      text: t('nav.vsAi'),
     },
     {
       path: routes.ranking,
       icon: '',
-      text: t('nav.Ranking'),
+      text: t('nav.ranking'),
     },
   ];
   return (
-    <ul className={style.nav}>
+    <nav className="nav">
       {links.map((link) => (
-        <li key={link.path} className={style.item}>
-          <Link href={link.path}>{link.text}</Link>
-        </li>
+        <Link key={link.path} className="item" href={link.path}>
+          {link.icon}
+          {link.text}
+        </Link>
       ))}
-      <li className={style.item}>
+      <div className="item">
         <ThemeToggle />
-      </li>
-    </ul>
+      </div>
+      <Text>abc</Text>
+    </nav>
   );
 };

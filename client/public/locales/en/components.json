@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Home",
+    "vsPlayer": "vs Player",
+    "vsAi": "vs AI",
+    "ranking": "Ranking",
+    "login": "Log in",
+    "create": "Create Account",
+    "logout": "Log out"
+  }
+}

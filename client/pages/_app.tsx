@@ -1,13 +1,12 @@
-import '../styles/globals.scss';
-import type { AppProps } from 'next/app';
 import { appWithTranslation } from 'next-i18next';
-import { Navigation } from '../components/Navigation/Navigation';
 import { ThemeProvider } from 'next-themes';
+import type { AppProps } from 'next/app';
+
+import '../styles/globals.scss';
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider themes={['navy', 'light']} defaultTheme="navy">
-      <Navigation />
       <Component {...pageProps} />
     </ThemeProvider>
   );

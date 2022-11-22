@@ -4,9 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--primary-3);
+  background-color: var(--primary-2);
+  font-size: var(--font-size-2);
 }
 
 * {
@@ -16,6 +15,15 @@ body {
 :root {
   --navy: #202a44;
   --light: #ffffff;
+
+  --font-size-0: 9px;
+  --font-size-1: 12px;
+  --font-size-2: 14px;
+  --font-size-3: 18px;
+  --font-size-4: 24px;
+  --font-size-5: 36px;
+  --font-size-6: 48px;
+  --font-size-7: 72px;
 
   // greys
   --neutral-0: #000000;
@@ -29,28 +37,33 @@ body {
   --neutral-8: #dfdfdf;
   --neutral-9: #ffffff;
 
+  // blues
+  --blue-0: #3892f3;
+  --blue-1: #147af3;
+  --blue-2: #0265dc;
+  --blue-3: #0054b6;
+  --blue-4: #004491;
+
   // navy
-  --primary-0: #202946;
-  --primary-1: #2b3556;
-  --primary-2: #354166;
-  --primary-3: #414d76;
-  --primary-4: #4c5a87;
-  --primary-5: #586799;
-  --primary-6: #6375ab;
-  --primary-7: #6f83bd;
-  --primary-8: #7c91cf;
-  --primary-9: #889fe2;
+  --primary-0: #121430;
+  --primary-1: #1e2341;
+  --primary-2: #2a3352;
+  --primary-3: #364463;
+  --primary-4: #435575;
+
+  --font-0: #ffffff;
+  --font-1: #c9c9c9;
+  --font-2: #959595;
 }
 
 [data-theme='light'] {
-  --primary-0: #9fa0a0;
-  --primary-1: #a9aaaa;
-  --primary-2: #b4b4b4;
-  --primary-3: #bebfbf;
-  --primary-4: #c9c9c9;
-  --primary-5: #d3d4d4;
-  --primary-6: #dedede;
-  --primary-7: #e9e9e9;
-  --primary-8: #f4f4f4;
-  --primary-9: #ffffff;
+  --primary-0: #d3d4d4;
+  --primary-1: #dedede;
+  --primary-2: #e9e9e9;
+  --primary-3: #f4f4f4;
+  --primary-4: #ffffff;
+
+  --font-0: #000000;
+  --font-1: #1f1f1f;
+  --font-2: #373737;
 }
