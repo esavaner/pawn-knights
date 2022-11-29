@@ -1,0 +1,14 @@
+div.board-container {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  div.board {
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+}

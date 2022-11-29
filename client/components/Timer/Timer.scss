@@ -1,0 +1,25 @@
+.timer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  height: 20px;
+
+  .timer-outer {
+    height: 10px;
+    width: 100%;
+    flex: 1;
+    padding: 1px;
+    background-color: var(--neutral-1);
+    border-radius: 15px;
+    overflow: hidden;
+
+    .timer-inner {
+      width: 100%;
+      height: 100%;
+      background-color: var(--neutral-8);
+      border-radius: 15px;
+    }
+  }
+}
