@@ -6,6 +6,8 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--primary-2);
   font-size: var(--font-size-2);
+  color: var(--font-0);
+  transition: all 0.3s;
 }
 
 * {
@@ -57,10 +59,10 @@ body {
 }
 
 [data-theme='light'] {
-  --primary-0: #d3d4d4;
-  --primary-1: #dedede;
-  --primary-2: #e9e9e9;
-  --primary-3: #f4f4f4;
+  --primary-0: #909090;
+  --primary-1: #ababab;
+  --primary-2: #c6c6c6;
+  --primary-3: #e2e2e2;
   --primary-4: #ffffff;
 
   --font-0: #000000;
