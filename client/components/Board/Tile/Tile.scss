@@ -2,7 +2,7 @@
   @for $var from 1 through 4 {
     $count: 2 * ($var + $base) + $add;
     &:nth-child(16n + #{$count}) {
-      background-color: var(--blue-2);
+      background-color: var(--blue-4);
       color: var(--neutral-8);
     }
   }

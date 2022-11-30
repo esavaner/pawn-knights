@@ -1,15 +1,25 @@
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-import { FaHome } from 'react-icons/fa';
+import { useRouter } from 'next/router';
+import {
+  FaChessKnight,
+  FaGraduationCap,
+  FaHome,
+  FaMedal,
+} from 'react-icons/fa';
 
+import { Logo } from 'components/Logo/Logo';
+import { Text } from 'components/Text/Text';
+
+import { classNames } from 'utils/classNames';
 import { routes } from 'utils/routes';
 
-import { Text } from '../Text/Text';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 import './Navigation.scss';
 
 export const Navigation = () => {
   const { t } = useTranslation('components');
+  const router = useRouter();
   const links = [
     {
       path: routes.home,
@@ -18,32 +28,39 @@ export const Navigation = () => {
     },
     {
       path: routes.room,
-      icon: '',
+      icon: <FaChessKnight />,
       text: t('nav.vsPlayer'),
     },
     {
       path: routes.ai,
-      icon: '',
+      icon: <FaGraduationCap />,
       text: t('nav.vsAi'),
     },
     {
       path: routes.ranking,
-      icon: '',
+      icon: <FaMedal />,
       text: t('nav.ranking'),
     },
   ];
   return (
     <nav className="nav">
+      <Logo />
       {links.map((link) => (
-        <Link key={link.path} className="item" href={link.path}>
+        <Text.Link
+          key={link.path}
+          className={classNames('item', {
+            active: router.pathname === link.path,
+          })}
+          href={link.path}
+          bold
+        >
           {link.icon}
           {link.text}
-        </Link>
+        </Text.Link>
       ))}
       <div className="item">
         <ThemeToggle />
       </div>
-      <Text>abc</Text>
     </nav>
   );
 };

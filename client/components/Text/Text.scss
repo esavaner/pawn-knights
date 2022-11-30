@@ -1,8 +1,6 @@
-span.text,
-p.text,
-div.text {
-  font-size: 16px;
+.text {
   color: var(--font-0);
+  text-decoration: none;
 
   &.light {
     color: var(--font-1);

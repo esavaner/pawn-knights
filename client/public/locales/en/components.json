@@ -1,8 +1,8 @@
 {
   "nav": {
     "home": "Home",
-    "vsPlayer": "vs Player",
-    "vsAi": "vs AI",
+    "vsPlayer": "Play vs Player",
+    "vsAi": "Play vs AI",
     "ranking": "Ranking",
     "login": "Log in",
     "create": "Create Account",

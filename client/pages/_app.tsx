@@ -1,14 +1,15 @@
 import { appWithTranslation } from 'next-i18next';
-import { ThemeProvider } from 'next-themes';
 import type { AppProps } from 'next/app';
+
+import { AppLayout } from 'components/AppLayout/AppLayout';
 
 import '../styles/globals.scss';
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps, router }: AppProps) {
   return (
-    <ThemeProvider themes={['navy', 'light']} defaultTheme="navy">
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <AppLayout router={router}>
+      <Component {...pageProps} key={router.asPath} />
+    </AppLayout>
   );
 }
 

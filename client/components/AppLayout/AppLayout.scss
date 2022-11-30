@@ -1,9 +1,14 @@
-div.layout {
-  display: flex;
-  width: 100vw;
-  height: 100vh;
-  main.content {
-    margin: 0;
-    flex: 1;
+main.content {
+  position: relative;
+  margin: 0;
+  flex: 1;
+  margin-left: 48px;
+  margin-right: 256px;
+  overflow: hidden;
+
+  article {
+    position: relative;
+    max-width: 1240px;
+    margin: auto;
   }
 }

@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--primary-2);
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-3);
   color: var(--font-0);
   transition: all 0.3s;
 }
@@ -14,18 +14,28 @@ body {
   box-sizing: border-box;
 }
 
+#__next {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
 :root {
   --navy: #202a44;
   --light: #ffffff;
 
+  --shadow-0: rgb(0 0 0 / 13%) 0px 1.6px 3.6px 0px,
+    rgb(0 0 0 / 11%) 0px 0.3px 0.9px 0px;
+
   --font-size-0: 9px;
   --font-size-1: 12px;
   --font-size-2: 14px;
-  --font-size-3: 18px;
-  --font-size-4: 24px;
-  --font-size-5: 36px;
-  --font-size-6: 48px;
-  --font-size-7: 72px;
+  --font-size-3: 16px;
+  --font-size-4: 18px;
+  --font-size-5: 24px;
+  --font-size-6: 36px;
+  --font-size-7: 48px;
+  --font-size-8: 72px;
 
   // greys
   --neutral-0: #000000;
@@ -53,7 +63,7 @@ body {
   --primary-3: #364463;
   --primary-4: #435575;
 
-  --font-0: #ffffff;
+  --font-0: #eeeeee;
   --font-1: #c9c9c9;
   --font-2: #959595;
 }
@@ -65,7 +75,7 @@ body {
   --primary-3: #e2e2e2;
   --primary-4: #ffffff;
 
-  --font-0: #000000;
+  --font-0: #111111;
   --font-1: #1f1f1f;
   --font-2: #373737;
 }

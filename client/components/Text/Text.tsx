@@ -1,10 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 
 import { classNames } from 'utils/classNames';
 
 import './Text.scss';
 
-type Props<T extends React.ElementType> = {
+type Props<T extends React.ElementType> = React.ComponentProps<T> & {
   as?: T;
   bold?: boolean;
   variant?: 'normal' | 'light' | 'lighter';
@@ -20,14 +21,19 @@ export const Text = <T extends React.ElementType = 'span'>({
   as,
   children,
   className,
+  ...rest
 }: Props<T>) => {
   const names = classNames('text', variant, { bold }, className);
   const Component = as || 'span';
   return (
-    <Component className={names} style={{ fontSize: size }}>
+    <Component className={names} style={{ fontSize: size }} {...rest}>
       {children}
     </Component>
   );
+};
+
+Text.Link = <T extends React.ElementType>(props: Props<T>) => {
+  return <Text {...props} as={Link} />;
 };
 
 Text.P = <T extends React.ElementType>(props: Props<T>) => {

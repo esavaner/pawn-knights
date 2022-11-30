@@ -2,9 +2,8 @@ import { Piece } from 'models/game';
 import type { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-import { AppLayout } from 'components/AppLayout/AppLayout';
 import { Board } from 'components/Board/Board';
-import { Button } from 'components/Button/Button';
+import { Tile } from 'components/Tile/Tile';
 import { Timer } from 'components/Timer/Timer';
 
 const mockGrid: Piece[][] = [
@@ -20,16 +19,18 @@ const mockGrid: Piece[][] = [
 
 export default function HomePage() {
   return (
-    <AppLayout>
-      <div>test</div>
+    <>
+      {/* <div>test</div>
       <div style={{ display: 'flex', gap: 10 }}>
         <Button>Test</Button>
         <Button secondary>Test</Button>
-      </div>
-      <Timer initial={6000} left={4000} />
-      <Timer initial={6000} left={4000} active />
-      <Board grid={mockGrid} />
-    </AppLayout>
+      </div> */}
+      <Tile>
+        <Timer initial={6000} left={4000} />
+        <Board grid={mockGrid} />
+        <Timer initial={6000} left={4000} active />
+      </Tile>
+    </>
   );
 }
 

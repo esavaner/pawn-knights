@@ -2,6 +2,8 @@ div.board-container {
   position: relative;
   width: 100%;
   padding-top: 100%;
+  box-sizing: unset;
+  border: 1px solid var(--neutral-0);
   div.board {
     display: flex;
     flex-flow: row wrap;

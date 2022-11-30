@@ -1,0 +1,20 @@
+.logo {
+  background-color: var(--blue-2);
+  border-radius: 8px;
+  position: relative;
+  padding: 5px;
+  width: fit-content;
+  margin: 20px auto 30px;
+  box-shadow: var(--shadow-0);
+
+  .pawn {
+    width: 50px;
+  }
+
+  .sword {
+    width: 40px;
+    position: absolute;
+    top: 12px;
+    left: 10px;
+  }
+}
