@@ -1,3 +1,5 @@
+import { Text } from 'components/Text/Text';
+
 import { classNames } from 'utils/classNames';
 
 import './Timer.scss';
@@ -22,7 +24,9 @@ export const Timer = ({ left, initial, active }: Props) => {
           style={{ width: `${(left * 100) / initial}%` }}
         />
       </div>
-      <span className="timer-counter">{formatTime(left)}</span>
+      <Text className="timer-counter" variant={active ? 'lighter' : undefined}>
+        {formatTime(left)}
+      </Text>
     </div>
   );
 };

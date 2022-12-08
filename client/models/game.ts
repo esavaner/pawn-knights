@@ -12,3 +12,5 @@ export type Piece =
   | 'P'
   | 'p'
   | '.';
+
+export type MoveList = string[];

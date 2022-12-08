@@ -52,7 +52,6 @@ export const Navigation = () => {
             active: router.pathname === link.path,
           })}
           href={link.path}
-          bold
         >
           {link.icon}
           {link.text}

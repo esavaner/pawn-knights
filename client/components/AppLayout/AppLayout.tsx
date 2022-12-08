@@ -26,12 +26,15 @@ export const AppLayout = ({ children, router }: Props) => {
               variants={{
                 initial: {
                   top: '100vh',
+                  // left: '-100%',
                 },
                 animate: {
                   top: '0vh',
+                  // left: 0,
                 },
                 exit: {
                   top: '-100vh',
+                  // left: '100%',
                 },
               }}
               transition={{
