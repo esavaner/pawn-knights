@@ -3,7 +3,6 @@ import type { GetStaticProps } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { Game } from 'components/Game/Game';
-import { Timer } from 'components/Timer/Timer';
 
 const mockGrid: Piece[][] = [
   ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r'],
@@ -20,7 +19,6 @@ export default function HomePage() {
   return (
     <>
       <Game grid={mockGrid} />
-      <Timer left={300} initial={1000} />
     </>
   );
 }

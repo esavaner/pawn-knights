@@ -1,5 +1,10 @@
-.game {
+.game-container {
   display: flex;
   width: 100%;
   height: 100%;
+  gap: 20px;
+
+  .game {
+    flex: 1;
+  }
 }

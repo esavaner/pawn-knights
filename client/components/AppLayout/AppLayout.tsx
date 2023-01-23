@@ -14,7 +14,6 @@ type Props = {
 export const AppLayout = ({ children, router }: Props) => {
   return (
     <ThemeProvider themes={['navy', 'light']} defaultTheme="navy">
-      <Navigation />
       <main className="content">
         <LazyMotion features={domAnimation}>
           <AnimatePresence initial={false}>
@@ -25,16 +24,16 @@ export const AppLayout = ({ children, router }: Props) => {
               exit="exit"
               variants={{
                 initial: {
-                  top: '100vh',
-                  // left: '-100%',
+                  // top: '100vh',
+                  left: '-100%',
                 },
                 animate: {
-                  top: '0vh',
-                  // left: 0,
+                  // top: '0vh',
+                  left: 0,
                 },
                 exit: {
-                  top: '-100vh',
-                  // left: '100%',
+                  // top: '-100vh',
+                  left: '100%',
                 },
               }}
               transition={{
@@ -46,6 +45,7 @@ export const AppLayout = ({ children, router }: Props) => {
           </AnimatePresence>
         </LazyMotion>
       </main>
+      <Navigation />
     </ThemeProvider>
   );
 };

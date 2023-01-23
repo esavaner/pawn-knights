@@ -1,8 +1,7 @@
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-import { classNames } from '../../utils/classNames';
-import styles from './ThemeToggle.module.scss';
+import './ThemeToggle.scss';
 
 export const ThemeToggle = () => {
   const [mounted, setMounted] = useState(false);
@@ -15,15 +14,9 @@ export const ThemeToggle = () => {
   if (!mounted) return <></>;
 
   return (
-    <div className={classNames(styles.container)}>
-      <button
-        className={classNames(styles.toggle)}
-        onClick={() => setTheme('navy')}
-      />
-      <button
-        className={classNames(styles.toggle, styles.light)}
-        onClick={() => setTheme('light')}
-      />
+    <div className="theme-toggle-containter">
+      <button className="toggle" onClick={() => setTheme('navy')} />
+      <button className="toggle light" onClick={() => setTheme('light')} />
     </div>
   );
 };

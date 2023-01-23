@@ -5,8 +5,10 @@
   gap: 20px;
   width: 100%;
   height: 20px;
+  margin: 20px 0;
 
   .timer-outer {
+    margin-top: 3px;
     height: 10px;
     width: 100%;
     flex: 1;
@@ -23,9 +25,15 @@
     }
   }
 
-  .timer-counter {
+  .timer-counter,
+  .timer-username {
+    width: 120px;
     &.active {
-      color: var(--lighter-2);
+      color: vat(--font-0);
     }
+  }
+
+  .timer-counter {
+    text-align: right;
   }
 }

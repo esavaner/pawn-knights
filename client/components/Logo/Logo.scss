@@ -1,11 +1,14 @@
+@import '../../styles/variables';
+
 .logo {
+  display: none;
   background-color: var(--blue-2);
+  box-shadow: $shadow-0;
   border-radius: 8px;
   position: relative;
   padding: 5px;
   width: fit-content;
   margin: 20px auto 30px;
-  box-shadow: var(--shadow-0);
 
   .pawn {
     width: 50px;
@@ -16,5 +19,9 @@
     position: absolute;
     top: 12px;
     left: 10px;
+  }
+
+  @media (min-width: $desktop) {
+    display: block;
   }
 }
