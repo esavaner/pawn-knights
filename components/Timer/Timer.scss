@@ -1,16 +1,17 @@
+@import '~styles/variables';
+
 .timer-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
+  justify-content: space-between;
   width: 100%;
-  height: 20px;
-  margin: 20px 0;
+  margin: 16px 0;
 
   .timer-outer {
+    display: none;
     margin-top: 3px;
     height: 10px;
-    width: 100%;
     flex: 1;
     padding: 1px;
     background-color: var(--neutral-1);
@@ -27,7 +28,7 @@
 
   .timer-counter,
   .timer-username {
-    width: 120px;
+    margin: 0;
     &.active {
       color: vat(--font-0);
     }
@@ -35,5 +36,11 @@
 
   .timer-counter {
     text-align: right;
+  }
+
+  @media (min-width: $desktop) {
+    .timer-outer {
+      display: block;
+    }
   }
 }

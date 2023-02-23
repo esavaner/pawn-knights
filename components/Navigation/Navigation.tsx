@@ -1,5 +1,4 @@
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import {
   FaChessKnight,
@@ -54,7 +53,7 @@ export const Navigation = () => {
           href={link.path}
         >
           {link.icon}
-          {link.text}
+          <span>{link.text}</span>
         </Text.Link>
       ))}
       <div className="item">

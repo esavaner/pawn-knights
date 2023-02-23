@@ -29,6 +29,10 @@ const nextConfig = {
         },
       ],
     });
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      styles: path.join(__dirname, 'styles'),
+    };
     return config;
   },
 };

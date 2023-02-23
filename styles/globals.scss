@@ -23,6 +23,12 @@ body {
   height: 100vh;
 }
 
+@media (min-width: $desktop) {
+  #__next {
+    flex-direction: row-reverse;
+  }
+}
+
 :root {
   --navy: #202a44;
   --light: #ffffff;
